@@ -40,11 +40,10 @@ body {
 }
 
 h1 {
-  max-width: 980px;
   margin: 0;
-  font-size: clamp(3.25rem, 8vw, 7.6rem);
-  line-height: 0.92;
-  letter-spacing: -0.065em;
+  font-size: clamp(2.5rem, 4.2vw, 4.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
   font-weight: 760;
   text-wrap: balance;
 }
@@ -100,6 +99,12 @@ footer a:hover {
   color: #ffffff;
 }
 
+@media (min-width: 900px) {
+  h1 {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 700px) {
   .hero,
   footer {
@@ -111,7 +116,7 @@ footer a:hover {
   }
 
   h1 {
-    font-size: clamp(3rem, 15vw, 5.4rem);
+    font-size: clamp(2.6rem, 12vw, 4.5rem);
   }
 
   footer {
