@@ -78,25 +78,52 @@ h1 {
   box-shadow: 0 0 14px rgba(140, 255, 140, 0.75);
 }
 
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #242424;
+  border-radius: 999px;
+  color: #d8d8d8;
+  background: rgba(255, 255, 255, 0.025);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.links a:hover {
+  transform: translateY(-1px);
+  border-color: #3a3a3a;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.links svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.links span {
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
 footer {
   width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
   padding: 24px 0 30px;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
   border-top: 1px solid #1a1a1a;
   font-size: 0.9rem;
   color: #707070;
-}
-
-footer a {
-  color: #a8a8a8;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffffff;
 }
 
 @media (min-width: 900px) {
@@ -119,8 +146,8 @@ footer a:hover {
     font-size: clamp(2.6rem, 12vw, 4.5rem);
   }
 
-  footer {
-    flex-direction: column;
-    gap: 10px;
+  .links a {
+    width: 100%;
+    justify-content: center;
   }
 }
